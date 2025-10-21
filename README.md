@@ -25,11 +25,21 @@ chmod +x scripts/sysinfo.sh
 ./scripts/sysinfo.sh
 ```
 
-## 3 Docker Containerization
+### 3 Docker Containerization
 This step containerizes `hello.py` using Python 3.10-slim.
 
 **Commands used:**
 ```bash
 docker build -t devops-hello .
 docker run --rm devops-hello
+```
 
+### 4 Status Badage Updation
+
+### 5. Job Deployment with Nomad
+- Nomad job file: `nomad/hello.nomad`  
+- Deploy Docker container:
+```bash
+nomad job run nomad/hello.nomad
+
+```
