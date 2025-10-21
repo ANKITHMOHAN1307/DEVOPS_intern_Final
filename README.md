@@ -1,5 +1,7 @@
 # DevOps Intern Final Project
 
+# STATUS: [CI] ([![CI Pipeline](https://github.com/ANKITHMOHAN1307/DEVOPS_intern_Final/actions/workflows/ci.yml/badge.svg)](https://github.com/ANKITHMOHAN1307/DEVOPS_intern_Final/actions/workflows/ci.yml)
+
 **Name:** Ankith Mohan  
 **Date:** October 21, 2025  
 
