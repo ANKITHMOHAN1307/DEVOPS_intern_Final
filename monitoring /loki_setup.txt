@@ -1,0 +1,12 @@
+Grafana Loki Monitoring Setup
+
+1. Loki container started:
+   docker run -d --name=loki --network=loki-network -p 3100:3100 grafana/loki:2.9.0
+
+2. Promtail container started to forward logs:
+   docker run -d --name=promtail --network=loki-network -v /var/log:/var/log -v /etc/promtail:/etc/promtail grafana/promtail:2.9.0 -config.file=/etc/promtail/promtail-config.yaml
+
+3. View logs:
+   curl http://localhost:3100/loki/api/v1/query?query={job="hello-task"}
+
+Optional: Use Grafana at http://localhost:3000 to visualize logs.
